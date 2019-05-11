@@ -15,6 +15,7 @@
 #include <QDataStream>
 #include <QDir>
 #include <QGuiApplication>
+#include <functional>
 
 #include <QDebug>
 
