@@ -39,10 +39,11 @@ Page {
 
         delegate: CategoriesFilterDelegate {
             categoryVisible: model.visible
-            height: Theme.itemSizeExtraSmall
+            height: visible ? Theme.itemSizeExtraSmall : 0
             text: model.name
             depth: model.depth
             textAlignment: Text.AlignLeft
+            visible: model.categoryId !== 4206
 
             onClicked: {
                 const setVisible = !model.visible
