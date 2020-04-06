@@ -384,7 +384,10 @@ bool OrnClient::removeBookmark(quint32 appId)
 
 bool OrnClient::categoryVisible(quint32 categoryId) const
 {
-    return !this->d_func()->hiddenCategories.contains(categoryId);
+    if (categoryId == 4206)
+        return false;
+    else
+        return !this->d_func()->hiddenCategories.contains(categoryId);
 }
 
 void OrnClient::setCategoryVisibility(quint32 categoryId, bool visible)
